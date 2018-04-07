@@ -1,6 +1,10 @@
 package practice01;
 
 public class Person {
+
+    private String name;
+    private int age;
+
     public String getName() {
         return name;
     }
@@ -17,17 +21,12 @@ public class Person {
         this.age = age;
     }
 
-    private String name;
-    private int age;
-
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
     public String introduce() {
-        StringBuffer s = new StringBuffer();
-        s.append("My name is ").append(this.name).append(". I am ").append(age).append(" years old.");
-        return s.toString();
+        return "My name is " + this.name + ". I am " + age + " years old.";
     }
 }
