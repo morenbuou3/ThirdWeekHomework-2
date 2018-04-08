@@ -6,44 +6,14 @@ import java.util.Set;
 public class Teacher extends Person {
 
     private String s = super.introduce() + " I am a Teacher.";
-
-    private Klass klass;
     private Set<Klass> classes = new HashSet<>();
-
-    public Klass getKlass() {
-        return klass;
-    }
-
-    public void setKlass(Klass klass) {
-        this.klass = klass;
-    }
 
     public Set<Klass> getClasses() {
         return classes;
     }
 
-    public void setClasses(Set<Klass> classes) {
-        this.classes = classes;
-    }
-
-    public Teacher(String name, int age) {
-        super(name, age);
-        this.klass = null;
-    }
-
-    public Teacher(String name, int age, Klass klass) {
-        super(name, age);
-        this.klass = klass;
-    }
-
     public Teacher(int id, String name, int age) {
         super(id, name, age);
-    }
-
-    public Teacher(int id, String name, int age, Klass klass) {
-        super(id, name, age);
-        this.klass = klass;
-
     }
 
     public Teacher(int id, String name, int age, Set<Klass> classes) {
